@@ -9,6 +9,7 @@ namespace ModernStore.Domain.Entities
             Id = Guid.NewGuid();
             Username = username;
             Password = password;
+            Active = true;
         }
 
         public Guid Id { get; private set; }

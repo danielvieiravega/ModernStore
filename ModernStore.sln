@@ -5,9 +5,11 @@ VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernStore.Domain", "ModernStore.Domain\ModernStore.Domain.csproj", "{214A235A-4A87-4C9B-9521-C3EF0234D3BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernStore.Console", "ModernStore.Console\ModernStore.Console.csproj", "{8168C168-B3E2-4E16-8073-DB81E5860DAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernStore.Console", "ModernStore.Console\ModernStore.Console.csproj", "{8168C168-B3E2-4E16-8073-DB81E5860DAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernStore.Shared", "ModernStore.Shared\ModernStore.Shared.csproj", "{C226D61D-E54D-493B-833F-DAA2844D240D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernStore.Shared", "ModernStore.Shared\ModernStore.Shared.csproj", "{C226D61D-E54D-493B-833F-DAA2844D240D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernStore.Domain.Tests", "ModernStore.Domain.Tests\ModernStore.Domain.Tests.csproj", "{4FBF4B0B-9715-4932-BF3F-358F446176BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{C226D61D-E54D-493B-833F-DAA2844D240D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C226D61D-E54D-493B-833F-DAA2844D240D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C226D61D-E54D-493B-833F-DAA2844D240D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FBF4B0B-9715-4932-BF3F-358F446176BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FBF4B0B-9715-4932-BF3F-358F446176BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FBF4B0B-9715-4932-BF3F-358F446176BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FBF4B0B-9715-4932-BF3F-358F446176BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
