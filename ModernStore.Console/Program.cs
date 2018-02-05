@@ -1,5 +1,6 @@
 ﻿using System;
 using ModernStore.Domain.Entities;
+using ModernStore.Domain.ValueObjects;
 
 namespace ModernStore.Console
 {
@@ -7,8 +8,11 @@ namespace ModernStore.Console
     {
         static void Main(string[] args)
         {
+            var name = new Name("Daniel", "Vega");
+            var email = new Email("vega@daniel.com");
             var user = new User("danielvieiravega", "Vega123");
-            var customer = new Customer("Daniel", "Vieira", "daniel@teste.com", user);
+            var document = new Document("02039746030");
+            var customer = new Customer(name, email, user, document);
             var mouse = new Product("mouse", 299, "mouse.jpg", 5);
             var mousepad = new Product("mousepad", 99, "mousepad.jpg", 7);
             var teclado = new Product("teclado", 599, "teclado.jpg", 9);
