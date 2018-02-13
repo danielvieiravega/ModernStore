@@ -1,5 +1,4 @@
 ﻿using System;
-using FluentValidator;
 using ModernStore.Domain.ValueObjects;
 using ModernStore.Shared.Entities;
 
@@ -22,6 +21,11 @@ namespace ModernStore.Domain.Entities
             AddNotifications(name.Notifications);
             AddNotifications(email.Notifications);
             AddNotifications(document.Notifications);
+        }
+
+        protected Customer()
+        {
+            
         }
         
         public Name Name { get; private set; }
