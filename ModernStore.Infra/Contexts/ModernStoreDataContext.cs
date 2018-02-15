@@ -7,7 +7,7 @@ namespace ModernStore.Infra.Contexts
     public class ModernStoreDataContext : DbContext
     {
         public ModernStoreDataContext()
-            :base(@"Server=tcp:danielvdb.database.windows.net,1433;Initial Catalog=ModernStore;Persist Security Info=False;User ID={your_username};Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
+            :base(@"")
         {
             Configuration.LazyLoadingEnabled = false;
             Configuration.ProxyCreationEnabled = false;
