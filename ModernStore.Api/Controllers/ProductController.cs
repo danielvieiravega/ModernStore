@@ -27,5 +27,12 @@ namespace ModernStore.Api.Controllers
             //Usuario autenticado
             //return Ok(new {user = User.Identity.Name});
         }
+
+        [HttpGet]
+        [Route("v1/products")]
+        public IActionResult TesteAutorizacao()
+        {
+            return Ok("Somente autorizada");
+        }
     }
 }
