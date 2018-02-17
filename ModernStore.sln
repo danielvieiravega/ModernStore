@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infra", "3 - Infra", "{
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ModernStore.Database", "ModernStore.Database\ModernStore.Database.sqlproj", "{7B758998-B9C0-48E4-9215-D1A00E86C71D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernStore.Api", "ModernStore.Api\ModernStore.Api.csproj", "{94C5E583-46FA-404F-8B81-4482C29E5531}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{7B758998-B9C0-48E4-9215-D1A00E86C71D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B758998-B9C0-48E4-9215-D1A00E86C71D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7B758998-B9C0-48E4-9215-D1A00E86C71D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{94C5E583-46FA-404F-8B81-4482C29E5531}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94C5E583-46FA-404F-8B81-4482C29E5531}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94C5E583-46FA-404F-8B81-4482C29E5531}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94C5E583-46FA-404F-8B81-4482C29E5531}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +63,7 @@ Global
 		{4FBF4B0B-9715-4932-BF3F-358F446176BF} = {7D597247-61A3-480D-872B-888AD0FEBC6C}
 		{5D06DA23-5D71-4A54-ACFD-0998DB1F37BB} = {33810985-D6F5-40E5-AF5C-0B95D0CE6CA9}
 		{7B758998-B9C0-48E4-9215-D1A00E86C71D} = {33810985-D6F5-40E5-AF5C-0B95D0CE6CA9}
+		{94C5E583-46FA-404F-8B81-4482C29E5531} = {7D9A808A-B951-4F11-90BF-0481612D3ACB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F87C5A43-D9A2-4E4F-B661-A5E93647B36C}

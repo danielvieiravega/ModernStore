@@ -66,6 +66,7 @@
     <Compile Include="Respositories\CustomerRepository.cs" />
     <Compile Include="Respositories\OrderRepository.cs" />
     <Compile Include="Respositories\ProductRepository.cs" />
+    <Compile Include="Services\EmailService.cs" />
     <Compile Include="Transactions\IUow.cs" />
     <Compile Include="Transactions\Uow.cs" />
   </ItemGroup>

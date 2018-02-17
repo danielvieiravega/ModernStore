@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using ModernStore.Shared;
 
 namespace ModernStore.Infra.Respositories
 {
@@ -27,7 +28,7 @@ namespace ModernStore.Infra.Respositories
         public IEnumerable<GetProductListCommandResult> Get()
         {
             //Usando o dapper
-            using (var conn = new SqlConnection(@""))
+            using (var conn = new SqlConnection(Runtime.ConnectionString))
             {
                 var query = "SELECT id, title, price, image from product";
                 conn.Open();

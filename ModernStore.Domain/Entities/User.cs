@@ -32,20 +32,27 @@ namespace ModernStore.Domain.Entities
 
         private string EncryptPassword(string pass)
         {
-            if (!string.IsNullOrEmpty(Password))
-            {
-                var password = (pass += "|2d331cca-f6c0-40c0-bb43-6e32989c2881");
-                var md5 = System.Security.Cryptography.MD5.Create();
-                var data = md5.ComputeHash(Encoding.Default.GetBytes(password));
-                var sbString = new StringBuilder();
+            if (string.IsNullOrEmpty(pass)) return string.Empty;
 
-                foreach (var t in data)
-                    sbString.Append(t.ToString("x2"));
+            var password = (pass += "|2d331cca-f6c0-40c0-bb43-6e32989c2881");
+            var md5 = System.Security.Cryptography.MD5.Create();
+            var data = md5.ComputeHash(Encoding.Default.GetBytes(password));
+            var sbString = new StringBuilder();
 
-                return sbString.ToString();
-            }
+            foreach (var t in data)
+                sbString.Append(t.ToString("x2"));
 
-            return string.Empty;
+            return sbString.ToString();
+
+        }
+
+        public bool Authenticate(string username, string password)
+        {
+            if (Username == username && Password == EncryptPassword(password))
+                return true;
+
+            AddNotification("User", "Usuário ou senha inválidos");
+            return false;
         }
     }
 }

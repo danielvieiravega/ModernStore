@@ -7,6 +7,7 @@ using System.Linq;
 using ModernStore.Domain.Commands.Results;
 using System.Data.SqlClient;
 using Dapper;
+using ModernStore.Shared;
 
 namespace ModernStore.Infra.Respositories
 {
@@ -32,6 +33,15 @@ namespace ModernStore.Infra.Respositories
                 .FirstOrDefault(x => x.Id == id);
         }
 
+        public Customer GetByUsername(string username)
+        {
+            return _context
+                .Customers
+                .Include(x => x.User)
+                .AsNoTracking()
+                .FirstOrDefault(x => x.User.Username == username);
+        }
+
         public GetCustomerCommandResult Get(string username)
         {
             //usando EF
@@ -50,7 +60,7 @@ namespace ModernStore.Infra.Respositories
             //    }).FirstOrDefault(x => x.Username == username);
 
             //Usando o dapper
-            using (var conn = new SqlConnection(@""))
+            using (var conn = new SqlConnection(Runtime.ConnectionString))
             {
                 var query = "select * from GetCustomerInfoView WHERE [Active]=1 AND [Username]=@username";
                 conn.Open();

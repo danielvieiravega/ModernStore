@@ -1,13 +1,14 @@
 ﻿using System.Data.Entity;
 using ModernStore.Domain.Entities;
 using ModernStore.Infra.Mappings;
+using ModernStore.Shared;
 
 namespace ModernStore.Infra.Contexts
 {
     public class ModernStoreDataContext : DbContext
     {
         public ModernStoreDataContext()
-            :base(@"")
+            :base(Runtime.ConnectionString)
         {
             Configuration.LazyLoadingEnabled = false;
             Configuration.ProxyCreationEnabled = false;
