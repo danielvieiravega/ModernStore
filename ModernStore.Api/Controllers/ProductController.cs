@@ -29,7 +29,7 @@ namespace ModernStore.Api.Controllers
         }
 
         [HttpGet]
-        [Route("v1/products")]
+        [Route("v1/testeauth")]
         public IActionResult TesteAutorizacao()
         {
             return Ok("Somente autorizada");
